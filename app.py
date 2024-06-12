@@ -8,9 +8,7 @@ df = pd.DataFrame(data)
 st.write("Dataframe used :")
 st.dataframe(df)
 input_text = st.text_area(label="Please enter the query")
-try :
+if input_text :
     result_df = duckdb.sql(input_text).df()
     st.write(result_df)
-except :
-    st.error("No query selected")
 
