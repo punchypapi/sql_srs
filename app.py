@@ -4,9 +4,12 @@ import duckdb
 
 st.write("Exercice de révision SQL")
 
-options = st.selectbox("Choissisez la thématique que vous souhaitez réviser",
+with st.sidebar:
+    options = st.selectbox("Choissisez la thématique que vous souhaitez réviser",
                        ['Joins','Group By', 'Windows Functions'],
-                       placeholder = "Choisie une thématique")
+                       placeholder = "Choisie une thématique"
+                           )
+    st.write("Your selection : ", options)
 
 tab_question, tab_solution = st.tabs(["Question", "Solution"])
 
