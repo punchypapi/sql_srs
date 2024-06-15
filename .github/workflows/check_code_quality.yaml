@@ -1,0 +1,19 @@
+name: check_code_quality
+on: pull_request
+jobs:
+  black:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: action/checkout@v3
+      - uses: action/setup-python@v4
+        with:
+          python-version: 3.9
+      - run: |
+          python3 -m pip install --upgrade pip
+          pip install black
+      - run: |
+          black --check --verbose .
+          
+        
+
+
