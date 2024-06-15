@@ -4,8 +4,8 @@ jobs:
   black:
     runs-on: ubuntu-20.04
     steps:
-      - uses: action/checkout@v3
-      - uses: action/setup-python@v4
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
           python-version: 3.9
       - run: |
@@ -13,6 +13,7 @@ jobs:
           pip install black
       - run: |
           black --check --verbose .
+
           
         
 
