@@ -1,2 +1,4 @@
+*.duckdb
 /venv
 *.csv
+test_db.py
